@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Gestionnaire de tâches</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">TaskMaster</div>
+        <p>Organise tes journées, atteins tes objectifs.</p>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h1>Mes tâches</h1>
+            <p>Chaque petite action te rapproche de ton objectif.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>Total</span>
+                <strong id="total">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>En cours</span>
+                <strong id="remaining">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Terminées</span>
+                <strong id="completed">0</strong>
+            </div>
+        </section>
+
+        <section class="task-panel">
+            <h2>Ajouter une tâche</h2>
+
+            <form id="task-form">
+                <input
+                    type="text"
+                    id="task-title"
+                    placeholder="Ex. : Réviser JavaScript"
+                    required
+                    maxlength="100"
+                >
+
+                <select id="task-category">
+                    <option value="Études">Études</option>
+                    <option value="Projet">Projet</option>
+                    <option value="Personnel">Personnel</option>
+                </select>
+
+                <button type="submit">+ Ajouter</button>
+            </form>
+
+            <div class="filters">
+                <button class="filter active" data-filter="all">
+                    Toutes
+                </button>
+                <button class="filter" data-filter="pending">
+                    En cours
+                </button>
+                <button class="filter" data-filter="completed">
+                    Terminées
+                </button>
+            </div>
+
+            <ul id="task-list"></ul>
+
+            <p id="empty-message">
+                Aucune tâche pour le moment. Ajoute ta première tâche !
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>TaskMaster © 2026 — Réalise tes objectifs.</p>
+    </footer>
+</body>
+</html>
