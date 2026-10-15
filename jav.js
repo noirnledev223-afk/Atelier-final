@@ -20,7 +20,7 @@ try {
             typeof task.title === "string" &&
             typeof task.category === "string" &&
             typeof task.done === "boolean"
-        )
+    )
     ) {
         tasks = savedTasks;
     }
